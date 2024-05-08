@@ -1,0 +1,41 @@
+#include <iostream>
+
+class Bank {
+public:
+    int getBalance() {
+        return 0;
+    }
+};
+
+class BankA : public Bank {
+public:
+    int getBalance() {
+        return 10000;
+    }
+};
+
+class BankB : public Bank {
+public:
+    int getBalance() {
+        return 15000;
+    }
+};
+
+class BankC : public Bank {
+public:
+    int getBalance() {
+        return 20000;
+    }
+};
+
+int main() {
+    BankA bankA;
+    BankB bankB;
+    BankC bankC;
+
+    std::cout << "Amount deposited in Bank A: Rs " << bankA.getBalance() << std::endl;
+    std::cout << "Amount deposited in Bank B: Rs " << bankB.getBalance() << std::endl;
+    std::cout << "Amount deposited in Bank C: Rs " << bankC.getBalance() << std::endl;
+
+    return 0;
+}
